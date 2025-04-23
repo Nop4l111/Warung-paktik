@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background 3D</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            perspective: 1000px; /* Menambahkan perspektif */
+            overflow: hidden; /* Menyembunyikan scrollbar */
+        }
+        .cube {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d; /* Memungkinkan efek 3D */
+            animation: rotate 5s infinite linear; /* Animasi rotasi */
+        }
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .front  { transform: translateZ(100px); }
+        .back   { transform: rotateY(180deg) translateZ(100px); }
+        .right  { transform: rotateY(90deg) translateZ(100px); }
+        .left   { transform: rotateY(-90deg) translateZ(100px); }
+        .top    { transform: rotateX(90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+        @keyframes rotate {
+            from { transform: rotateY(0); }
+            to { transform: rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cube">
+    <div class="face front"></div>
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Web dengan Iklan dan Teks Berjalan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink ;
+        }
+        .banner {
+            width: 100%;
+            height: 100px; 
+            background-color: #f2f2f2; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc; 
+            margin: 20px 0; 
+        }
+        .banner img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            background-color: #e0e0e0; 
+            padding: 10px 0; 
+        }
+        .marquee-text {
+            display: inline-block;
+            padding-left: 100%; 
+            animation: marquee 10s linear infinite; 
+        }
+        @keyframes marquee {
+            0% { transform: translate(0); }
+            100% { transform: translate(-100%); }
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            color: #666;
+        }
+        .welcome-box {
+            background-color: #404040;
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+            font-size: 24px; 
+            margin: 20px; 
+        }
+        .container {
+    display: flex;
+    flex-direction: row; /* Mengatur arah elemen */
+    justify-content: space-between; /* Menyebarkan elemen secara merata */
+    width: 100%; /* Memperpanjang lebar kontainer */
+}
+.item {
+    flex: 1; /* Membuat item mengambil ruang yang sama */
+    margin: 10px; /* Menambahkan jarak antar item */
+}
+        .column {
+            background-color: #ffccff; /* Warna latar belakang pink */
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .column h2 {
+            margin: 0 0 10px;
+        }
+        .column button {
+            background-color: #ff66b2; /* Warna tombol */
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .column button:hover {
+            background-color: #ff3385; /* Warna tombol saat hover */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <!-- New Sponsor Banner -->
+    <div class="banner">
+        <a href="https://www.layarkaca21.com" target="_blank">
+            <img src="https://via.placeholder.com/728x90.png?text=Layar+kaca+21" alt="Layarkaca21">
+        </a>
+    </div>
+</head>
+<body> 
+
+    <div class="marquee">
+        <div class="marquee-text">Selamat datang di situs web kami! Nikmati konten menarik dan informasi terbaru.</div>
+    </div>
+
+    <div class="welcome-box">
+        Selamat Datang di situs OoD
+    </div>
+
+    <p>Ini adalah contoh konten situs web Anda. Anda dapat menambahkan lebih banyak informasi di sini.</p>
+
+    <h2>Silahkan Login</h2>
+    <form id="loginForm" method="POST" action="/
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <style>
+       <body> {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        label {
+            margin-right: 10px;
+            align-self: center;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+<div class="login-container">
+    <h2>Silahkan Login</h2>
+    <form id="loginForm" onsubmit="return handleSubmit(event)">
+        <div class="form-group">
+            <label for="userId">ID Pengguna:</label>
+            <input type="text" id="userId" name="userId" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Kata Sandi:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Masuk</button>
+    </form>
+</div>
+
+<script>
+    function handleSubmit(event) {
+        event.preventDefault(); // Mencegah pengiriman form
+        const userId = document.getElementById('userId').value;
+        const password = document.getElementById('password').value;
+
+        // Menampilkan notifikasi
+        alert(`ID Pengguna: ${userId}\nKata Sandi: ${password}`);
+        
+        // Di sini Anda bisa menambahkan logika untuk mengirim data ke server
+    }
+</script>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilihan Kolom Permainan</title>
+    <style>
+        <body{
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .column {
+            background-color: #ffccff; /* Warna latar belakang pink */
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .column h2 {
+            margin: 0 0 10px;
+        }
+        .column button {
+            background-color: #ff66b2; /* Warna tombol */
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .column button:hover {
+            background-color: #ff3385; /* Warna tombol saat hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column">
+        <h2>Permainan 1</h2>
+        <p>Deskripsi permainan 1.</p>
+        <button>Pilih</button>
+    </div>
+    <div class="column">
+        <h2>Permainan 2</h2>
+        <p>Deskripsi permainan 2.</p>
+        <button>Pilih</button>
+    </div>
+    <div class="column">
+        <h2>Permainan 3</h2>
+        <p>Deskripsi permainan 3.</p>
+        <button>Pilih</button>
+    </div>
+</div>
+
+</body>
+</html>
